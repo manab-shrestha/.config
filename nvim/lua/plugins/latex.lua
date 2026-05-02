@@ -14,10 +14,11 @@ return {
         },
       }
 
-      if vim.fn.has("mac") == 1 then
-        vim.g.vimtex_view_method = "skim"
-        vim.g.vimtex_view_skim_sync = 1
-        vim.g.vimtex_view_skim_activate = 1
+      if vim.fn.executable("sioyek") == 1 then
+        vim.g.vimtex_view_method = "sioyek"
+        vim.g.vimtex_view_sioyek_exe = "sioyek"
+        vim.g.vimtex_view_sioyek_options = "--reuse-window"
+        vim.g.vimtex_callback_progpath = vim.v.progpath
       elseif vim.fn.executable("zathura") == 1 then
         vim.g.vimtex_view_method = "zathura"
       else

@@ -1,6 +1,9 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+local server = vim.fn.stdpath("cache") .. "/server.pipe"
+pcall(vim.fn.serverstart, server)
+
 local cxx = vim.fn.executable("g++-15") == 1 and "g++-15" or "g++"
 vim.opt.makeprg = cxx .. " % -std=c++20 -Wall -Wextra -pedantic -o %<"
 
