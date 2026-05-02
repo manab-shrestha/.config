@@ -1,0 +1,6 @@
+.DS_Store
+*.bak
+
+# Installed plugin checkouts are reproducible from tmux/nvim plugin managers.
+tmux/plugins/
+nvim/.git/
