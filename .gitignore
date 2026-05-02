@@ -1,6 +1,17 @@
+# Ignore everything in ~/.config by default.
+*
+
+# Track only this repo's selected config folders.
+!.gitignore
+!kitty/
+!kitty/**
+!nvim/
+!nvim/**
+!tmux/
+!tmux/**
+
+# Ignore generated or reproducible files inside tracked folders.
 .DS_Store
 *.bak
-
-# Installed plugin checkouts are reproducible from tmux/nvim plugin managers.
 tmux/plugins/
 nvim/.git/
